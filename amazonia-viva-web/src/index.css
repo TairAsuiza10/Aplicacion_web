@@ -24,9 +24,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: contents;
-  place-items: center;
-  min-width: 320px;
+  display: space-around;
+  justify-content: flex;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -65,4 +65,63 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+
+
+.hero {
+  height: 100vh; /* ocupa toda la pantalla */
+  /*background-image: url("../assets/fondo-2.jpg");*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* efecto de movimiento/parallax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Oscurecer un poco la imagen para que el texto resalte */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Asegurar que el texto esté encima */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animación sutil en el texto */
+.hero-content h1 {
+  font-size: 3rem;
+  animation: fadeInDown 2s ease;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  animation: fadeInUp 2s ease;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
 }

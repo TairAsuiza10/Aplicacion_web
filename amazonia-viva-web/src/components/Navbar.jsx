@@ -1,19 +1,25 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../assets/logo.png"; // tu logo generado
 
-function Navbar() {
+export default function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">🌿 Amazonía Viva</div>
-      <ul className="navbar-links">
-        <li><Link to="/">Inicio</Link></li>
+      <div className="navbar-container">
+        {/* Logo */}
+        <div className="navbar-logo">
+          <img src={logo} alt="Amazonía Viva" />
+        </div>
+
+        {/* Links */}
+        <ul className="navbar-links">
+          <li><Link to="/">Inicio</Link></li>
         <li><Link to="/catalogo">Catálogo</Link></li>
         <li><Link to="/mapa">Mapa</Link></li>
         <li><Link to="/conciencia">Conciencia</Link></li>
-      </ul>
+        </ul>
+      </div>
     </nav>
   );
 }
-
-export default Navbar;
 
