@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import fondoImg from "../assets/images/fondo.jpg";
 import img2 from "../assets/images/img2.jpg";
+import Hero from "../components/Hero";
 
 function Home() {
   const [imagenActual, setImagenActual] = useState(fondoImg);
@@ -78,6 +79,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Hero />
     </div>
   );
 }

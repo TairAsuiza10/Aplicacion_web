@@ -1,30 +1,40 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3); /* transparente */
+  backdrop-filter: blur(8px);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #14532d; /* verde oscuro */
-  padding: 1rem 2rem;
-  color: white;
 }
 
-.navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.navbar-logo img {
+  height: 60px; /* aquí ajustas el tamaño del logo */
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.navbar-links li a {
+.navbar-links a {
   text-decoration: none;
   color: white;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.navbar-links li a:hover {
-  color: #a3e635; /* verde claro */
+.navbar-links a:hover {
+  color: #a6e22e; /* verde selva */
 }
