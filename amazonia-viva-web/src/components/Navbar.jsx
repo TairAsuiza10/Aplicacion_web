@@ -14,7 +14,7 @@ export default function Navbar() {
         {/* Links */}
         <ul className="navbar-links">
           <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/catalogo">Catálogo</Link></li>
+        <li><Link to="/explora">Explora</Link></li>
         <li><Link to="/mapa">Mapa</Link></li>
         <li><Link to="/conciencia">Conciencia</Link></li>
         </ul>
