@@ -1,0 +1,30 @@
+.text {
+  height: 100vh;              /* ocupa toda la pantalla (no solo min-height) */
+  width: 100%;                /* ocupa todo el ancho */
+  display: flex;              
+  justify-content: center;    /* centra horizontal */
+  align-items: center;        /* centra vertical */
+  text-align: center;
+  position: relative;         /* evita conflictos con el body */
+  margin: 0;                  /* quita márgenes */
+  padding: 0;
+}
+
+
+.text-container h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d1fae5; 
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
