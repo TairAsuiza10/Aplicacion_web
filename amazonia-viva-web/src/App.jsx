@@ -6,6 +6,7 @@ import Catalogo from "./pages/Catalogo";
 import Mapa from "./pages/Mapa";
 import Conciencia from "./pages/Conciencia";
 
+
 function App() {
   return (
     <Router>
